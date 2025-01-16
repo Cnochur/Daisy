@@ -2,7 +2,9 @@
 
 **Daisy** is a personal program designed to help me track my mood, this helps me when going for councilling/therapy. It serves as a tool to support Cognitive Behavioral Therapy (CBT) by offering insights into emotional patterns and progress over time.
 
-**Future Updates**
+## Future Updates
+
+I want to add a login so i can have some security. On the topic of security I do want the passwords to be stored safely. 
 
 ## Daisy v1
 

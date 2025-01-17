@@ -27,7 +27,7 @@ This programme is also the first in which I tried everything myself before seeki
 
 ## Daisy v2
 
-### Features
+### New Features
 
 - Store enteries in a MySQL database (locally).
 - View all the enteries.
@@ -49,3 +49,34 @@ This version has taught me quite a lot. I first started looking into SQLite3 wit
 So I downloaded MySQL Workbench, installed mysql.connector in python and got to it. As a visual learner I first go to YouTube for a quick introductory as I have seen and played with SQL before. I then got to work using python to create the database, then workbench to write queries and build the tables needed with the correct columns. 
 
 From there I hopped over to my copy of v1 and begin to alter it to include the local database.
+
+
+## Daisy v3
+
+### New Features
+
+- Password hashing.
+- Adding a salt to hashed passwords.
+- Reading hashes
+- Password hiding
+
+### Lessons Learned
+
+- The difference between encrpytion and hashing.
+- How salting a hash adds an extra level of security against brute force attacks. 
+- Parent child relationships in databases.
+- Working more with MySQL Workbench to view the values/tables.
+- Hiding a password when being entered.
+
+I really enjoyed the high level introduction into storing passwords safely. Using python this was made simple by installing bcrypt and importing the module. In registration, with the module I was first able to randomly generate a salt, then hash the password using utf-8 encoding, combine these and store the hash. This eliminates plain text passwords being stored at rest in the database.
+
+Logging in was now more secure as when entering a password the field does not populate on screen. It then searches the database for a corresponding user_id and password hash. 
+
+When logged in, the user_id is used to identify the entries made by that user which allows for us to only show that users entries and no-one else.
+
+
+### Conclusion
+
+I would like to conclude this project here and move to a fresh challenge. I have gained a lot of knowledge from this and want to try and apply this within another small project. 
+
+There are some bugs within the code and im sure it could be abstracted further.
